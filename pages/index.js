@@ -8,7 +8,6 @@ export default function HomePage () {
   const featuredEvents = getFeaturedEvents();
 
   return (
-    <EventList events={featuredEvents}>
-    </EventList>
+    <EventList events={featuredEvents} />
   );
 }
