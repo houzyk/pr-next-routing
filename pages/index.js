@@ -2,12 +2,13 @@
 import { getFeaturedEvents } from "../data";
 
 // component
+import EventList from "../components/events/event-list.component";
 
 export default function HomePage () {
-  const feasturedEvents = getFeaturedEvents();
+  const featuredEvents = getFeaturedEvents();
 
   return (
-    <>
-    </>
+    <EventList events={featuredEvents}>
+    </EventList>
   );
 }
