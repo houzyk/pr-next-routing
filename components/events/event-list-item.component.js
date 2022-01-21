@@ -1,8 +1,9 @@
-// next
-import Link from "next/link";
-
 // components
 import Button from "../ui/button.component";
+// icon components
+import DateIcon from "../icons/date-icon";
+import AddressIcon from "../icons/address-icon";
+import ArrowRightIcon from "../icons/arrow-right-icon";
 
 // css
 import styles from './event-list-item.styles.module.css'
@@ -28,11 +29,13 @@ export default function EventListItem(props) {
           </h2>
           <div className={styles.date}>
             <time>
+              <DateIcon />
               {displayDate}
             </time>
           </div>
           <div className={styles.address}>
             <address>
+              <AddressIcon />
               {displayAddress}
             </address>
           </div>
@@ -40,6 +43,9 @@ export default function EventListItem(props) {
       </div>
       <div className={styles.actions}>
         <Button link={`/events/${id}`}>
+          <span className={styles.icon}>
+            <ArrowRightIcon />
+          </span>
           Explore
         </Button>
       </div>
