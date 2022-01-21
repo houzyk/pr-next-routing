@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 // data
 import { getAllEvents } from "../../data";
-import { getFilteredEvents } from "../../data";
 
 // components
 import EventList from "../../components/events/event-list.component";
