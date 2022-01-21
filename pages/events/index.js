@@ -1,6 +1,10 @@
+// data
+import { getAllEvents } from "../../data";
+
+// components
+import EventList from "../../components/events/event-list.component";
+
 export default function EventIndexPage () {
-  return (
-    <>
-    </>
-  );
+  const events = getAllEvents();
+  return <EventList events={events} />
 }
