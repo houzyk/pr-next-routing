@@ -14,11 +14,7 @@ export default function EventShowPage () {
 
   const event = getEventById(router.query.eventId);
 
-  if (!event) {
-    return (
-      <p>No Event Found</p>
-    );
-  }
+  if (!event) return <p>No Event Found</p>
 
   return (
     <>
