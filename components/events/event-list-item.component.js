@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // components
 import Button from "../ui/button.component";
 // icon components
@@ -21,7 +23,7 @@ export default function EventListItem(props) {
 
   return (
     <li className={styles.item}>
-      <img src={`/${image}`} alt="event image"/>
+      <Image src={`/${image}`} alt="event image" width={250} height={160}/>
       <div className={styles.content}>
         <div className={styles.summary}>
           <h2>
