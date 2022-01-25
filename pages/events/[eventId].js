@@ -9,13 +9,13 @@ import EventLogistics from "../../components/event-detail/event-logistics";
 async function getData () {
   const dataPath = path.join(process.cwd(), 'dummy-data.json')
   const dataJSON = await fs.readFile(dataPath)
-  const data = await JSON.parse(dataJSON)
+  const data = JSON.parse(dataJSON)
   return data
 }
 
 function EventShowPage ({ event }) {
   
-  if (!event) return <p>No Event Found</p>
+  if (!event) return <p>Loading...</p>
 
   return (
     <>
@@ -44,7 +44,8 @@ export async function getStaticProps (context) {
   return {
     props: {
       event
-    }
+    },
+    revalidate: 30
   }
 }
 
